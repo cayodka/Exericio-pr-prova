@@ -21,7 +21,9 @@
     </header>
     <main>
         <div id="carrosel">
-
+            <button id="menos">menos</button>
+            <img id="imagem" src="/assets/1.jpeg">
+            <button id="mais">mais</button>
         </div>
         <div id="containerCategorias">
             <div id="categoriasTexto">
@@ -129,6 +131,25 @@
                 modal.style.display = "none";
             });
         });
+
+        const mais = document.querySelector("#mais");
+const menos = document.querySelector("#menos");
+const imagem = document.querySelector("#imagem")
+
+let atual = 1;
+
+menos.addEventListener("click", ()=> {
+    if (atual === 1){
+        atual = 4;
+    }
+    imagem.src = `/assets/${--atual}.jpeg`;
+});
+mais.addEventListener("click", ()=> {
+    if (atual === 3){
+        atual = 0;
+    }
+    imagem.src = `/assets/${++atual}.jpeg`;
+});
 
     </script>
 </body>

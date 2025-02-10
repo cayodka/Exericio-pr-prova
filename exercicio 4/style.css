@@ -54,11 +54,26 @@ main {
     width: 100%;
     max-width: 600px;
     height: 180px;
-    background-image: url(/assets/banner.webp);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+    border-radius: 1px;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#imagem {
+    height: 150px;
+    width: 450px;
+}
+
+#mais,
+#menos {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    border: none;
+    background-color: #333;
+    color: whitesmoke;
 }
 
 #containerCategorias {
@@ -171,7 +186,7 @@ main {
     animation: slideUp 0.3s ease-out;
 }
 
-.segunda-tela button:hover{
+.segunda-tela button:hover {
     transform: scale(1.2);
 }
 
@@ -179,13 +194,14 @@ main {
     from {
         transform: translateY(100%);
     }
+
     to {
         transform: translateY(0);
     }
 }
 
 #segundatela {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -215,7 +231,7 @@ main {
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .modal-back-icon {
@@ -247,58 +263,67 @@ main {
     padding: 20px;
 }
 
-#modalProductImage{
+#modalProductImage {
     position: relative;
     top: 0rem;
-   margin-top: 2rem;
-   background-color: red;
+    margin-top: 2rem;
+    background-color: red;
 }
-#modalProductPrice{
+
+#modalProductPrice {
     color: red;
     font-size: 20px;
     display: flex;
     gap: 10px;
 }
-#outropreço{
+
+#outropreço {
     color: #33333385;
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
-.colorproducts{
+
+.colorproducts {
     height: 3rem;
     display: flex;
     justify-content: space-around;
 }
 
-.colorproducts div:hover{
+.colorproducts div:hover {
     transform: scale(1.2);
 }
-#red{
+
+#red {
     background-color: red;
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
 }
-#blue{
+
+#blue {
     background-color: blue;
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
 }
-#green{
+
+#green {
     background-color: green;
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
 }
-.sizeproducts{
+
+.sizeproducts {
     display: flex;
     height: 3rem;
     justify-content: space-around;
 }
-.sizeproducts div:hover{
+
+.sizeproducts div:hover {
     transform: scale(1.2);
 }
-.sizeproducts div{
+
+.sizeproducts div {
     border-radius: 100%;
     background-color: rgb(156, 156, 156);
     height: 2rem;
@@ -307,30 +332,36 @@ main {
     display: flex;
     justify-content: center;
 }
-#descrição{
+
+#descrição {
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
-#buttonaddbuy{
+
+#buttonaddbuy {
     height: 2rem;
     display: flex;
     justify-content: space-around;
 }
-#buttonaddbuy button{
+
+#buttonaddbuy button {
     height: 2rem;
     width: 8rem;
 }
-#add{
+
+#add {
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border: 1px solid black;
 }
-#buy{
+
+#buy {
     background-color: black;
     color: whitesmoke;
 }
+
 @media (max-width: 480px) {
     header {
         padding: 0 0.5rem;
