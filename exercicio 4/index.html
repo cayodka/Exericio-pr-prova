@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios 4</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=PT+Sans+Narrow:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="/assets/logo.png" height="32px" width="32px">
+        <button></button>
+    </header>
+    <main>
+        <div id="carrosel">
+
+        </div>
+        <div id="containerCategorias">
+            <div id="categoriasTexto">
+                <h6>Shop by Categoty</h6>
+                See all
+            </div>
+            <div id="categoriasImagens">
+                <div class="ctimg"><img src="/assets/woman.jpg" height="64px" width="64px">Woman</div>
+                <div class="ctimg"><img src="/assets/man.jpg" height="64px" width="64px">Man</div>
+                <div class="ctimg"><img src="/assets/teen.jpg" height="64px" width="64px">Teens</div>
+                <div class="ctimg"><img src="/assets/kids.jpg" height="64px" width="64px">Kids</div>
+                <div class="ctimg"><img src="/assets/baby.jpg" height="64px" width="64px">Baby</div>
+            </div>
+        </div>
+        <div id="cardsProdutos">
+            <div id="produtosTexto">
+                <h6>Currented For You</h6>
+                See all
+            </div>
+            <div id="cards">
+                <div class="cards"><img src="/assets/blusa.jpg">
+                    <div>Camisa polo azul</div>
+                    <div>R$240</div>
+                </div>
+                <div class="cards"><img src="/assets/blusa.jpg">
+                    <div>Camisa polo azul</div>
+                    <div>R$240</div>
+                </div>
+                <div class="cards"><img src="/assets/blusa.jpg">
+                    <div>Camisa polo azul</div>
+                    <div>R$240</div>
+                </div>
+            </div>
+        </div>
+        <div id="segundatela" class="segunda-tela">
+            <div class="segunda-tela-content">
+                <div class="segunda-tela-header">
+                    <i class="fas fa-arrow-left modal-back-icon" id="modalBackButton"></i>
+                    <div class="modal-title">Detail Product</div>
+                    <i class="fas fa-shopping-cart modal-cart-icon"></i>
+                </div>
+                <img id="modalProductImage" class="segunda-tela-image" src="/assets/blusa.jpg" alt="Product Image">
+                <div class="segunda-tela-details">
+                    <div id="modalProductName" class="product-name"><strong>CAmise Polo azul marinho</strong></div>
+                    <div id="modalProductPrice" class="product-price">$295,00<div id="outropreço">$550,00</div>
+                    </div>
+                    <div id="descrição">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id alias labore suscipit, aut iusto
+                        consequatur modi necessitatibus aliquid voluptate facilis maxime sed
+                    </div>
+                    <div class="colorproducts">
+                        <div id="red"></div>
+                        <div id="blue"></div>
+                        <div id="green"></div>
+                    </div>
+                    <div class="sizeproducts">
+                        <div>GG</div>
+                        <div>M</div>
+                        <div>P</div>
+                    </div>
+                    <div id="buttonaddbuy">
+                        <button id="add"><img src="/assets/caixa-de-entrada.png">Add to kart</button>
+                        <button id="buy">Buy now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <footer>
+            <footer class="footer-header">
+                <div class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <p>Home</p>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-search"></i>
+                    <p>Buscar</p>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-bell"></i>
+                    <p>Notificações</p>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <p>Perfil</p>
+                </div>
+            </footer>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".cards");
+            const modal = document.getElementById("segundatela");
+            const closeButton = document.getElementById("modalBackButton");
+
+        
+            cards.forEach(card => {
+                card.addEventListener("click", function () {
+                    modal.style.display = "flex";
+                });
+            });
+
+        
+            closeButton.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+        });
+
+    </script>
+</body>
+
+</html>
